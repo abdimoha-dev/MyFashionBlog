@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+########################################################
+###################ADMIN################################
+########################################################
+Route::get('article','Admin\ArticleController@showArticlesForms');
+Route::post('article','Admin\ArticleController@saveArticles');
