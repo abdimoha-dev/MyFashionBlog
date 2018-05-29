@@ -23,3 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 ########################################################
 Route::get('article','Admin\ArticleController@showArticlesForms');
 Route::post('article','Admin\ArticleController@saveArticles');
+
+
+#############################################################
+########################READER###############################
+#############################################################
+Route::get('articles','Admin\ArticleController@displayArticles');
