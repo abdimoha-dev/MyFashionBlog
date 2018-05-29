@@ -16,12 +16,19 @@ class ArticleController extends Controller
 
     public function saveArticles(Request $request)
     {
-        dd($request->toArray());
         Article::Create([
             'author_id' => auth()->user()->id,
             'title'     => $request->title,
-            'contents'   => $request->contents,
+            'contents'  => $request->contents,
 
+        ]);
+
+    }
+
+    public function displayArticles()
+    {
+        return view('admin.articles.main', [
+            'articles' => Article::paginate(10),
         ]);
     }
 }
