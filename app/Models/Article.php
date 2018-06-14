@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     protected $table = 'articles';
-    protected $fillable = ['title', 'contents', 'author_id'];
+    protected $fillable = ['title', 'contents', 'author_id', 'photos'];
     public $timestamps = TRUE;
 
     public function author()

@@ -16,10 +16,12 @@ class ArticleController extends Controller
 
     public function saveArticles(Request $request)
     {
+
         Article::Create([
             'author_id' => auth()->user()->id,
             'title'     => $request->title,
             'contents'  => $request->contents,
+
 
         ]);
 
